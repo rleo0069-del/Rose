@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rose | @Rose_M_Leo</title>
+  <meta name="description" content="Rose — Accomplished professional in art, law, media, and entrepreneurship. Oil impressionist, former Senior Paralegal, ghostwriter, and media strategist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-deep: #0b0b0c;
+      --bg-charcoal: #141416;
+      --bg-card: #1a1a1d;
+      --bg-card-hover: #222226;
+      --text-primary: #f4f1ea;
+      --text-secondary: #b8b2a6;
+      --text-muted: #8a847a;
+      --gold: #c9b896;
+      --gold-soft: #a8956e;
+      --border-subtle: rgba(201, 184, 150, 0.12);
+      --border-card: rgba(255, 255, 255, 0.06);
+      --radius: 16px;
+      --max-width: 980px;
+      --section-gap: 5.5rem;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.65;
+      font-weight: 400;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 70vh;
+      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201, 184, 150, 0.07), transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.75rem;
+      position: relative;
+      z-index: 1;
+    }
+    header {
+      padding: 5.5rem 0 4rem;
+      text-align: center;
+    }
+    .name {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(3.2rem, 8vw, 4.8rem);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+      line-height: 1.1;
+    }
+    .handle {
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+    .handle a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+    .handle a:hover { color: var(--text-primary); }
+    .tagline {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.15rem, 2.8vw, 1.4rem);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--text-secondary);
+      max-width: 520px;
+      margin: 0 auto 1.75rem;
+      line-height: 1.5;
+    }
+    .location {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 2.25rem;
+      font-weight: 400;
+    }
+    .bio {
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
+      margin: 0 auto;
+      max-width: 200px;
+    }
+    section { padding: var(--section-gap) 0; }
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      font-weight: 500;
+      margin-bottom: 1.75rem;
+      text-align: center;
+    }
+    .glance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .glance-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+    .glance-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-subtle);
+    }
+    .glance-card .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+    }
+    .glance-card .value {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.35;
+    }
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.35rem;
+    }
+    .highlight-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius);
+      padding: 1.85rem 1.75rem;
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+    .highlight-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-subtle);
+      transform: translateY(-2px);
+    }
+    .highlight-card h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+      line-height: 1.25;
+    }
+    .highlight-card .period {
+      font-size: 0.8rem;
+      color: var(--gold);
+      letter-spacing: 0.03em;
+      margin-bottom: 0.9rem;
+      font-weight: 400;
+    }
+    .highlight-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+    .highlight-card .quote {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--gold-soft);
+      margin-top: 0.85rem;
+      display: block;
+    }
+    .experience-list { display: flex; flex-direction: column; }
+    .exp-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 1.5rem;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--border-card);
+      align-items: baseline;
+    }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-role {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .exp-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+    .exp-detail {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.55;
+    }
+    footer {
+      padding: 4rem 0 3.5rem;
+      text-align: center;
+      border-top: 1px solid var(--border-card);
+      margin-top: 1rem;
+    }
+    .footer-closing {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+    }
+    .footer-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      margin-bottom: 2rem;
+      transition: color 0.25s ease;
+    }
+    .footer-link:hover { color: var(--text-primary); }
+    .footer-link svg { width: 16px; height: 16px; fill: currentColor; }
+    .disclaimer {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    @media (max-width: 768px) {
+      header { padding: 3.5rem 0 3rem; }
+      .glance-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .highlights-grid { grid-template-columns: 1fr; }
+      .exp-item { grid-template-columns: 1fr; gap: 0.35rem; padding: 1.25rem 0; }
+      section { padding: 3.75rem 0; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 1.25rem; }
+      .name { font-size: 2.8rem; }
+      .highlight-card { padding: 1.5rem 1.35rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="name">Rose</h1>
+      <div class="handle"><a href="https://x.com/Rose_M_Leo" target="_blank" rel="noopener">@Rose_M_Leo</a></div>
+      <p class="tagline">“Many are the stars I see yet in my eye no star like thee”</p>
+      <p class="location">Texas · Florida · Boca Raton roots</p>
+      <p class="bio">
+        Accomplished professional with extensive experience in entrepreneurial ventures, event management, celebrity promotions, complex litigation support, media strategy, and fine art. Demonstrated outstanding leadership, project management, and business analysis skills across New York, Florida, California, and Texas. Skilled Compliance Specialist, retired Federal &amp; State Senior Paralegal, working artist specializing in oil impressionism and landscapes, and ghostwriter helping people preserve their life stories.
+      </p>
+    </header>
+    <div class="divider"></div>
+    <section>
+      <p class="section-label">At a Glance</p>
+      <div class="glance-grid">
+        <div class="glance-card">
+          <div class="label">Focus</div>
+          <div class="value">Art · Law · Media · Entrepreneurship</div>
+        </div>
+        <div class="glance-card">
+          <div class="label">Specialty</div>
+          <div class="value">Complex Litigation Support &amp; Oil Painting</div>
+        </div>
+        <div class="glance-card">
+          <div class="label">Style</div>
+          <div class="value">Build in public · Create with intention</div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+    <section>
+      <p class="section-label">What Stands Out</p>
+      <div class="highlights-grid">
+        <article class="highlight-card">
+          <h3>Senior Federal &amp; State Paralegal</h3>
+          <div class="period">2000 – 2020</div>
+          <p>Complex litigation specialist with deep experience in liability, trucking, auto, workers’ compensation, property, professional liability, trial preparation, medical chronologies, discovery, and courtroom support.</p>
+        </article>
+        <article class="highlight-card">
+          <h3>Working Artist</h3>
+          <div class="period">2009 – Present</div>
+          <p>Oil impressionism and landscape paintings; active in social media and art marketing. Creating with intention across canvas and community.</p>
+        </article>
+        <article class="highlight-card">
+          <h3>Ghostwriter</h3>
+          <div class="period">2020 – 2024</div>
+          <p>Helps clients write, edit, design, and publish their life stories and books.</p>
+          <span class="quote">“If it is not written down for history to read, you never really existed.”</span>
+        </article>
+        <article class="highlight-card">
+          <h3>Media &amp; Event Strategist</h3>
+          <div class="period">Various</div>
+          <p>Supported fashion events (Couture Fashion Week), political media campaigns, inventor workshops, and private client groups with precision and presence.</p>
+        </article>
+      </div>
+    </section>
+    <div class="divider"></div>
+    <section>
+      <p class="section-label">Selected Experience</p>
+      <div class="experience-list">
+        <div class="exp-item">
+          <div>
+            <div class="exp-role">Actress</div>
+            <div class="exp-meta">Retired / Self-employed · Present · Texas</div>
+          </div>
+          <div class="exp-detail">Continued creative expression through performance and presence.</div>
+        </div>
+        <div class="exp-item">
+          <div>
+            <div class="exp-role">Business &amp; Fashion Design Consultant</div>
+            <div class="exp-meta">2010 – Present</div>
+          </div>
+          <div class="exp-detail">Strategic guidance across business development and fashion design.</div>
+        </div>
+        <div class="exp-item">
+          <div>
+            <div class="exp-role">Media Relations Coordinator &amp; Booker</div>
+            <div class="exp-meta">Including 2016 campaign support</div>
+          </div>
+          <div class="exp-detail">Coordinated media relationships and talent booking for high-visibility projects.</div>
+        </div>
+        <div class="exp-item">
+          <div>
+            <div class="exp-role">Florida Notary Public at Large &amp; CEO</div>
+            <div class="exp-meta">MTTN, Inc. · ADesignerRose eBay store</div>
+          </div>
+          <div class="exp-detail">Entrepreneurial leadership and notarial services.</div>
+        </div>
+        <div class="exp-item">
+          <div>
+            <div class="exp-role">Foundation</div>
+            <div class="exp-meta">New York &amp; Florida</div>
+          </div>
+          <div class="exp-detail">Earlier foundation in marketing, advertising, newspaper production, and legal support.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <div class="container">
+      <p class="footer-closing">Creating, consulting, and capturing stories.</p>
+      <a class="footer-link" href="https://x.com/Rose_M_Leo" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @Rose_M_Leo
+      </a>
+      <p class="disclaimer">
+        Views and opinions are personal. Content for informational and entertainment purposes only. No legal advice is offered.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
